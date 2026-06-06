@@ -1,8 +1,19 @@
+/* ==========================================================================
+   Pricing Plans — Stylesheet
+   ========================================================================== */
+
+
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* ── Page layout ───────────────────────────────────────────────────────── */
+/* Centers the card row on a warm off-white canvas (#f7f7f4) */
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -14,6 +25,10 @@ body {
     padding: 20px;
 }
 
+
+/* ── Cards container ───────────────────────────────────────────────────── */
+/* Flex row: cards sit side-by-side with 24px gap */
+
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -22,6 +37,10 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
+
+/* ── Card ──────────────────────────────────────────────────────────────── */
+/* Single pricing card: 320px wide, min 380px tall, warm gray (#f2f1ed) */
 
 .card {
     display: flex;
@@ -34,11 +53,16 @@ body {
     flex-shrink: 0;
 }
 
+/* Upper section: title, price, and feature list */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+
+/* ── Card typography ───────────────────────────────────────────────────── */
+
+/* Plan name — 22px regular, dark text (#26251e) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +71,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row — amount and period aligned on baseline */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,21 +79,27 @@ body {
     align-items: baseline;
 }
 
+/* Price value — e.g. "Free" or "$20" */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Billing period — e.g. "/mo." */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+
+/* ── Feature list ──────────────────────────────────────────────────────── */
+
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Lead-in text — "Includes:" or "Everything in Hobby, plus:" */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
@@ -88,12 +119,17 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
     margin-right: 10px;
     font-weight: 400;
 }
+
+
+/* ── Buttons ───────────────────────────────────────────────────────────── */
+/* Pill-shaped CTA pinned to the bottom of each card via margin-top: auto */
 
 .download-button {
     margin-top: auto;
@@ -117,6 +153,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary variant — dark fill (#111), used on Pro card */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -129,6 +166,10 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
+
+
+/* ── Dev label ─────────────────────────────────────────────────────────── */
+/* Fixed badge at top center — not part of the pricing UI */
 
 .page-label {
     position: fixed;
